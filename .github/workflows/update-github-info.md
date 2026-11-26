@@ -7,15 +7,12 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
-engine:
-  id: copilot
-  copilot-sdk: true
+engine: copilot
 model: gpt-4.1
 tools:
   github:
     toolsets:
       - repos
-  web-fetch:
   edit:
 steps:
   - name: Pre-fetch update sources for the agent
